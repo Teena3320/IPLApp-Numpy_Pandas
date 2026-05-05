@@ -1,69 +1,59 @@
-# IPL Dataset — NumPy Assignment
+# IPL Data Pipeline & Analysis (2008–2020)
+An end‑to‑end data pipeline and analysis project built using Python and Pandas on IPL ball‑by‑ball and match‑level datasets.
+Pipeline Flow
+Ingest → Clean → Transform → Analyze → Report → Export
 
-This project analyzes IPL ball‑by‑ball data using **only NumPy**, focusing on vectorized operations and aggregation without Pandas.
+# Datasets
 
-Dataset used: `deliveries.csv`
+deliveries.csv – Ball‑by‑ball IPL data
+matches.csv – Match metadata
 
----
+Source: IPL Complete Dataset (2008–2020)
 
-## Task Overview
+# Tech Stack
 
-### Task 1: Total Runs per Match
-Calculates the **total runs scored in each match** by summing all runs (including extras) across both innings.
+Python
+Pandas
+Jupyter Notebook / Python Script
+CSV & Excel outputs
 
----
 
-### Task 2: Top 5 Batters
-Identifies the **top 5 highest run‑scoring batters** based on total runs scored off the bat.
+# Analysis Covered
 
----
+Total runs per match and per team
+Top batters (runs, strike rate, consistency)
+Bowler performance (economy, dot balls)
+Powerplay (1–6) vs Death overs (16–20) analysis
+Venue & city‑wise scoring trends (cleaned data)
+Season‑wise run trends
+Toss impact analysis
+Winning team analysis (handling DLS & Super Overs)
 
-### Task 3: Strike Rate of Batters
-Computes **strike rate for each batter**, defined as runs scored per 100 balls faced.
+All cricket‑specific rules (wides, no‑balls, byes, leg‑byes) are handled correctly.
 
----
+# Outputs
+CSV Files (output/)
 
-### Task 4: Economy Rate of Bowlers
-Calculates the **economy rate for each bowler**, defined as runs conceded per over.
+runs per match
+team scores
+top batters
+strike rate
+economy
+consistent batters
+boundary analysis
+dot balls
+powerplay & death overs
+venue, city & season analysis
+toss impact & winning accuracy
 
----
+Excel
 
-### Task 5: Runs per Over
-Computes the **average runs scored in each over (1–20)** across all matches.
+ipl_analysis.xlsx (multi‑sheet summary)
 
----
 
-### Task 6: Boundary Analysis
-Analyzes boundary scoring by:
-- Counting total number of **fours**
-- Counting total number of **sixes**
-- Identifying the **team with the most boundaries**
+# Key Insights
 
----
-
-### Task 7: Death Overs Analysis
-Analyzes overs 16–20 by:
-- Calculating **total runs scored in death overs**
-- Identifying the **team with the highest death‑over runs**
-
----
-
-### Task 8: Highest Scoring Match
-Finds the **match with the highest combined total runs**.
-
----
-
-### Task 9: Runs per Team per Match
-Computes **total runs scored by each team in each match**, including extras.
-
----
-
-### Task 10: Match Winner Approximation
-Determines the **approximate winner of each match** by comparing total runs scored by both teams.
-
----
-
-### Task 11: Match Scorecard Generation
-Generates a **readable scorecard** for each match showing:
-- Team names
-- Total runs scored by each team
+IPL scoring has increased steadily over seasons
+Powerplay and death overs heavily influence outcomes
+Toss provides marginal advantage, not certainty
+Venue and city conditions significantly affect scoring
